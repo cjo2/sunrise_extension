@@ -48,6 +48,10 @@ const updateSunset = (time) => {
 const toggleContainer = () => {
   const loadingContainer = document.getElementById('loading-container');
   const scheduleContainer = document.getElementById('schedule');
+  loadingContainer.className = 'hidden';
+  loadingContainer.className = 'loading-container';
+  scheduleContainer.className = 'hidden';
+  scheduleContainer.className = 'schedule-container';
 }
 
 

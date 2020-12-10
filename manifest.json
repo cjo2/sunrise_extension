@@ -1,13 +1,13 @@
 {
-  "name": "A browser action with a popup that changes the page color",
-  "description": "Change the current page color",
+  "name": "Sunrise Extension",
+  "description": "Cole Styron & Chris Docuyanan (Codesmith Hackathon Entry)",
   "version": "1.0",
   "permissions": [
     "activeTab",
     "geolocation"
   ],
   "browser_action": {
-      "default_title": "Set this page's color.",
+      "default_title": "Check the sunset and sunrise times",
       "default_icon": "icon.png",
       "default_popup": "popup.html"
   },

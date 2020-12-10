@@ -2,18 +2,24 @@
 <html>
 
 <head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+  </style>
   <title>Sunrise & Sunset Times</title>
   <style>
     .extension-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 400px;
+      width: 375px;
+      height: 150px;
     }
 
     .schedules {
       display: flex;
       flex-direction: row;
+      background-image: url('SunriseCropped.jpg');
+      min-height: 100%;
     }
 
     .schedule-container {
@@ -21,6 +27,7 @@
       flex-direction: column;
       align-items: center;
       margin: 20px;
+      background-color: transparent;
     }
 
     .icon {
@@ -28,7 +35,10 @@
     }
 
     .title {
+      font-family: 'JetBrains Mono';
+      font-size: 20px;
       font-weight: bold;
+      text-align: center;
     }
 
     .icon,
@@ -36,6 +46,11 @@
     .time {
       margin-top: 2px;
       margin-bottom: 2px;
+      color: #FFFFFF;
+    }
+
+    .time {
+      font-size: 16px;
     }
 
     .button-container {
@@ -44,28 +59,29 @@
     }
 
     .hidden {
-      visibility: hidden;
+      display: none;
     }
 
-    .visible {
-      visibility: visible;
+    .loading-container{
+      display: flex;
+      background-image: url('Sunrise.jpg');
+      min-height: 100px;
+      width: 100%;
     }
 
-    
   </style>
 </head>
 
 <body>
   <div class="extension-container">
-    <h4 id="location">Sunrise & Sunset</h4>
     <div id="schedule" class="schedules hidden">
       <div class="schedule-container">
-        <div class="icon">&#x1F307</div>
+        <!-- <div class="icon">&#x1F307</div> -->
         <div class="title">SUNSET TONIGHT</div>
         <div class="time" id="sunsetTime">00:00</div>
       </div>
       <div class="schedule-container">
-        <div class="icon">&#x1F304</div>
+        <!-- <div class="icon">&#x1F304</div> -->
         <div class="title">SUNRISE TOMORROW</div>
         <div class="time" id="sunriseTime">00:00</div>
       </div>

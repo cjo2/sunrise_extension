@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Sunrise & Sunset Times</title>
+  <style>
+    .extension-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+    }
+
+    .schedules {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .schedule-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .icon {
+      font-size: 20px;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .icon,
+    .title,
+    .time {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="extension-container">
+    <h4 id="location">LOCATION PLACEHOLDER</h4>
+    <div class="schedules">
+      <div class="schedule-container">
+        <div class="icon"></div>
+        <div class="title">SUNSET TONIGHT</div>
+        <div class="time" id="sunsetTime">00:00</div>
+      </div>
+      <div class="schedule-container">
+        <div class="icon"></div>
+        <div class="title">SUNRISE TOMORROW</div>
+        <div class="time" id="sunriseTime">00:00</div>
+      </div>
+
+    </div>
+    <div class="loading-container">
+
+    </div>
+    <div class="button-container"><button>Reset location</button></div>
+  </div>
+
+
+</body>
+<script src="popup.js"></script>
+
+</html>

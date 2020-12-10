@@ -48,10 +48,13 @@ const updateSunset = (time) => {
 const toggleContainer = () => {
   const loadingContainer = document.getElementById('loading-container');
   const scheduleContainer = document.getElementById('schedule');
-  loadingContainer.className = 'hidden';
-  loadingContainer.className = 'loading-container';
-  scheduleContainer.className = 'hidden';
-  scheduleContainer.className = 'schedule-container';
+  if(loadingContainer.className === 'loading-container') {
+    loadingContainer.className = 'hidden';
+    scheduleContainer.className = 'schedules';
+  } else {
+    loadingContainer.className = 'loading-container';
+    scheduleContainer.className = 'hidden';
+  }
 }
 
 
@@ -86,6 +89,7 @@ if (navigator.geolocation) {
         timesObj.sunrise = sunrise;
         updateSunset(timesObj.sunset)
         updateSunrise(timesObj.sunrise)
+        toggleContainer();
         // setLocation(`${latitude.slice(0,4)}, ${longitude.slice(0,4)}`)
       })
 
